@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4525eff632f444fbe4efa917b96a9c, type: 3}
+  m_Name: Fire Department Invoice and Observation Report
+  m_EditorClassIdentifier: 
+  docTags:
+  - Fire
+  - Fog Machine
+  - Covers
+  name: FireDepartmentInvoiceAndObservationReport.pdf
+  destription: Invoice from the fire department after the alarms where set off by
+    the fogger.
+  content: "THE FILE BEGINS:\nPeoria Fire Department - House #2\n\n\nDay of Visit:\t\t\t10/14/2018\n\nBelieved
+    cause of Visit:\tAlarm was set off by a fogger machine.\n\nCharge for Visit:\t\t$5,000.00\n\n\nFireman
+    observations of the scene:\n* No fire damage in the room where the alarm was set
+    off in.\n* No sign of foul play or tampering.\n* Fog machine is unplugged.\n*
+    Smoke detectors were uncovered.\n* Covers for smoke detectors were in the room
+    on the desk."
+  searchScore: 1.5099989

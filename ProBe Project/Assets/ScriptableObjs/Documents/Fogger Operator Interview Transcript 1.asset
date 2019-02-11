@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4525eff632f444fbe4efa917b96a9c, type: 3}
+  m_Name: Fogger Operator Interview Transcript 1
+  m_EditorClassIdentifier: 
+  docTags:
+  - Fogger
+  - Interview
+  - Transcript
+  - Don
+  name: FoggerOperatorInterviewTranscripts1.pdf
+  destription: The first page of the trascript of the interview with the foggers after
+    the incident.
+  content: "THE FILE BEGINS:\n10/15/2018\n\n\"Please state your name for the record.\"\n\t\t\"Don
+    Jackson.\"\n\n\"Thank you. This interview is to investigate the cause of the repeated
+    calls to the fire department. To begin, can you describe the process of fogging
+    a room?\"\n\t\t\"So we start by getting out the fogger machine, the fogger fluid,
+    and the covers smoke detectors. We then take that to whatever room we're assigned
+    to Once we get there, we put the covers on the smoke detector and add fluid to
+    the machine. We turn on the machine and then we put it all away once it's done.\"\n\n\"Who
+    put the cover on last time?\"\n\t\t\"Kevin, I think.\"\n\n\"And did Kevin put
+    it on correctly?.\"\n\t\t\"I didn't watch him do it so I'm not sure.\"\n\n\"Alright,
+    well those are all the questions I have. Thank you for your time.\""
+  searchScore: 0.01

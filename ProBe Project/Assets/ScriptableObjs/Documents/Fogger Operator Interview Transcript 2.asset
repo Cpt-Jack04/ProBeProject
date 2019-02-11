@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4525eff632f444fbe4efa917b96a9c, type: 3}
+  m_Name: Fogger Operator Interview Transcript 2
+  m_EditorClassIdentifier: 
+  docTags:
+  - Fogger
+  - Interview
+  - Transcript
+  - Kevin
+  name: FoggerOperatorInterviewTranscripts2.pdf
+  destription: The second page of the trascript of the interview with the foggers
+    after the incident.
+  content: "THE FILE BEGINS:\n10/15/2018\n\n\"Please state your name for the record.\"\n\t\t\"Kevin
+    Gale.\"\n\n\"Thank you. This interview is to investigate the cause of the repeated
+    calls to the fire department. To begin, can you describe the process of fogging
+    a room?\"\n\t\t\"First, we get all of the equipment from the back. Then we go
+    to the room and we put the covers on the smoke detectors. Then we add fluid and
+    run the machine. Once it's done, we put it back.\"\n\n\"Who put the cover on last
+    time?\"\n\t\t\"I believe is was Don.\"\n\n\"Well Don said it was you.\"\n\t\t\"I
+    don't remember doing it.\"\n\n\"So, if neither of you put on the cover, who did?\"\n\t\t\"I
+    have no clue.\"\n\n\"Did you and Don pass your assessment?\"\n\t\t\"I did and
+    as far as I know, Don did too.\"\n\n\"Alright, well those are all the questions
+    I have. Thank you for your time.\""
+  searchScore: 0.02

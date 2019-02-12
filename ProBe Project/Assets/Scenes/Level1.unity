@@ -880,6 +880,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 739721662271037492, guid: 03f1043963fda8e4496c30669d18ea1d,
         type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 739721662271037492, guid: 03f1043963fda8e4496c30669d18ea1d,
+        type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1266687278}
@@ -897,6 +902,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnDeselect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ConductSearch
+      objectReference: {fileID: 0}
+    - target: {fileID: 739721662271037492, guid: 03f1043963fda8e4496c30669d18ea1d,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 739721662271037492, guid: 03f1043963fda8e4496c30669d18ea1d,
+        type: 3}
+      propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 739721662258753134, guid: 03f1043963fda8e4496c30669d18ea1d,
         type: 3}
@@ -1225,11 +1240,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DocumentDisplay
       objectReference: {fileID: 0}
-    - target: {fileID: 6170759134862117996, guid: 533aa6e36a8108241a91c7df03acd1b1,
-        type: 3}
-      propertyPath: displayManager
-      value: 
-      objectReference: {fileID: 1266687279}
     - target: {fileID: 6170759134862117985, guid: 533aa6e36a8108241a91c7df03acd1b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1335,6 +1345,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6170759134862117996, guid: 533aa6e36a8108241a91c7df03acd1b1,
+        type: 3}
+      propertyPath: displayManager
+      value: 
+      objectReference: {fileID: 1266687279}
     - target: {fileID: 6170759135477560902, guid: 533aa6e36a8108241a91c7df03acd1b1,
         type: 3}
       propertyPath: m_havePropertiesChanged

@@ -39,7 +39,7 @@ public class DocumentSearchManager : MonoBehaviour
         if (DocumentDatabase.documentDatabase.Length < 1 || DocumentDatabase.documentDatabase[0] == null || DocumentDatabase.documentDatabase[0].searchScore < 1f)
             return null;
 
-        Debug.Log(DocumentDatabase.documentDatabase[0].searchScore);
+        Debug.Log("Search Score:" + DocumentDatabase.documentDatabase[0].searchScore);
         return DocumentDatabase.documentDatabase[0];
     }
 
@@ -49,7 +49,7 @@ public class DocumentSearchManager : MonoBehaviour
         if (DocumentDatabase.documentDatabase.Length < 2 || DocumentDatabase.documentDatabase[1] == null || DocumentDatabase.documentDatabase[1].searchScore < 1f)
             return null;
 
-        Debug.Log(DocumentDatabase.documentDatabase[1].searchScore);
+        Debug.Log("Search Score:" + DocumentDatabase.documentDatabase[1].searchScore);
         return DocumentDatabase.documentDatabase[1];
     }
 
@@ -59,7 +59,7 @@ public class DocumentSearchManager : MonoBehaviour
         if (DocumentDatabase.documentDatabase.Length < 3 || DocumentDatabase.documentDatabase[2] == null || DocumentDatabase.documentDatabase[2].searchScore < 1f)
             return null;
 
-        Debug.Log(DocumentDatabase.documentDatabase[2].searchScore);
+        Debug.Log("Search Score:" + DocumentDatabase.documentDatabase[2].searchScore);
         return DocumentDatabase.documentDatabase[2];
     }
 

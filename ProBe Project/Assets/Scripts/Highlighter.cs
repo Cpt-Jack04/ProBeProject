@@ -8,6 +8,8 @@ using TMPro;
 public class Highlighter : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private const string contentName = "Content";
+    private const string startHighlight = "<mark=#ffff00aa>";
+    private const string endHighlight = "</mark>";
 
     void Start()
     {
@@ -27,23 +29,32 @@ public class Highlighter : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         if (content == null || !content.gameObject.name.Equals(contentName))
             return;
         
-
+        // Check to see if you clicked on a letter.
         int index = FindCharacterClicked(content, eventData.position, eventData.enterEventCamera);
-        Debug.Log(index);
         if (index > -1)
-        {
-            Debug.Log(content.textInfo.characterInfo[index]);
-        }
+            content.text.Insert(index, startHighlight);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        // Checks for to make sure that the click on object is the content text.
+        RaycastResult upClick = eventData.pointerCurrentRaycast;
+        TextMeshProUGUI content = upClick.gameObject.GetComponent<TextMeshProUGUI>();
+        if (content == null || !content.gameObject.name.Equals(contentName))
+            return;
 
+        // Check to see if you left go on a letter.
+        int index = FindCharacterClicked(content, eventData.position, eventData.enterEventCamera);
+        if (index > -1)
+            content.text.Insert(index, endHighlight);
     }
 
     // Returns the index of the characterInfo of the content text.
     private int FindCharacterClicked(TextMeshProUGUI content, Vector2 position, Camera eventCamera)
     {
+        Vector3 wordlPos = eventCamera.ScreenToWorldPoint(position);
+        float buffer = .001f;
+
         for (int index = 0; index < content.textInfo.characterCount; index ++)
         {
             // Gets the character info for that character
@@ -55,11 +66,10 @@ public class Highlighter : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
             Vector3 bottomRight = content.rectTransform.TransformPoint(new Vector3(characterInfo.topRight.x, characterInfo.bottomLeft.y, 0f));
             Vector3 bottomLeft = content.rectTransform.TransformPoint(new Vector3(characterInfo.bottomLeft.x, characterInfo.topRight.y, 0f));
 
-            Debug.Log(position);
             // Compares to clicked position to the character bounds.
-            if (topLeft.x < position.x && position.x < topRight.x)
+            if (((topLeft.x - buffer) < wordlPos.x) && (wordlPos.x < (topRight.x + buffer)))
             {
-                if (bottomLeft.y < position.y && position.y < topLeft.y)
+                if (((bottomRight.y - buffer) < wordlPos.y) && (wordlPos.y < (topRight.y + buffer)))
                     return index;
             }
         }

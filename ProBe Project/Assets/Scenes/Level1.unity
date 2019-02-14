@@ -531,7 +531,6 @@ GameObject:
   - component: {fileID: 1266687280}
   - component: {fileID: 1266687279}
   - component: {fileID: 1266687278}
-  - component: {fileID: 1266687282}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -608,18 +607,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1266687282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266687277}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427d165056c414c4dae136b3cfbc1c4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1564166066 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 739721661665609275, guid: 03f1043963fda8e4496c30669d18ea1d,
@@ -1240,6 +1227,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DocumentDisplay
       objectReference: {fileID: 0}
+    - target: {fileID: 6170759134862117996, guid: 533aa6e36a8108241a91c7df03acd1b1,
+        type: 3}
+      propertyPath: displayManager
+      value: 
+      objectReference: {fileID: 1266687279}
     - target: {fileID: 6170759134862117985, guid: 533aa6e36a8108241a91c7df03acd1b1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1345,11 +1337,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 6170759134862117996, guid: 533aa6e36a8108241a91c7df03acd1b1,
-        type: 3}
-      propertyPath: displayManager
-      value: 
-      objectReference: {fileID: 1266687279}
     - target: {fileID: 6170759135477560902, guid: 533aa6e36a8108241a91c7df03acd1b1,
         type: 3}
       propertyPath: m_havePropertiesChanged

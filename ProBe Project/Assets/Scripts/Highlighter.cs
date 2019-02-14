@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
 
@@ -11,15 +8,7 @@ public class Highlighter : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     private const string startHighlight = "<mark=#ffff00aa>";
     private const string endHighlight = "</mark>";
 
-    void Start()
-    {
-
-    }
-
-    void Update()
-    {
-
-    }
+    private bool highlighting = false;
 
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -31,24 +20,30 @@ public class Highlighter : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
         
         // Check to see if you clicked on a letter.
         int index = FindCharacterClicked(content, eventData.position, eventData.enterEventCamera);
+        Debug.Log(index);
         if (index > -1)
-            content.text.Insert(index, startHighlight);
+        {
+            content.text = content.text.Insert(index, startHighlight);
+            highlighting = !false;
+        }
     }
 
+    // Doesn't really work.
     public void OnPointerUp(PointerEventData eventData)
     {
         // Checks for to make sure that the click on object is the content text.
-        RaycastResult upClick = eventData.pointerCurrentRaycast;
-        TextMeshProUGUI content = upClick.gameObject.GetComponent<TextMeshProUGUI>();
-        if (content == null || !content.gameObject.name.Equals(contentName))
-            return;
+        // RaycastResult upClick = eventData.pointerCurrentRaycast;
+        // TextMeshProUGUI content = upClick.gameObject.GetComponent<TextMeshProUGUI>();
+        // if (content == null || !content.gameObject.name.Equals(contentName))
+        // return;
 
         // Check to see if you left go on a letter.
-        int index = FindCharacterClicked(content, eventData.position, eventData.enterEventCamera);
-        if (index > -1)
-            content.text.Insert(index, endHighlight);
+        // int index = FindCharacterClicked(content, eventData.position, eventData.enterEventCamera);
+        // if (index > -1)
+        // content.text = content.text.Insert(index, endHighlight);
     }
 
+    // Not very accuracy.
     // Returns the index of the characterInfo of the content text.
     private int FindCharacterClicked(TextMeshProUGUI content, Vector2 position, Camera eventCamera)
     {

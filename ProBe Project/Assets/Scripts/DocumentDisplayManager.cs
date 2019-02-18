@@ -11,12 +11,15 @@ public class DocumentDisplayManager : MonoBehaviour
     private Vector3 hiddenPos;                                              // Vector3 reference for documents while off screen.
     [SerializeField] private Vector3 shownPos;                              // Vector3 reference for documents while on screen.
 
+
     private bool isShowing;                                                 // Is true if the doc is to move on screen or while stationary on screen.
     private bool isMoving;                                                  // Is true if the doc is moving on/off screen.
+
     
     [Range(1f, 20f)] [SerializeField] private float speed = 5f;             // Multiplier for the speed of the document moving on/off.
     private float startTime;                                                // Variable for the when the document starts moving. 
     private float journeyLength;                                            // Distance the document needs to travel.
+
 
     public Button showDocumentButton;                                       // Reference to the button the shows/hides the document.
     private TextMeshProUGUI showDocumentText;                               // Reference to the TMPro component on the button above.
@@ -24,6 +27,11 @@ public class DocumentDisplayManager : MonoBehaviour
     private const string openingDocText = "Opening Document";               // Switches to this string while the document is opening.
     private const string closeDocText = "Close Document";                   // Switches to this string once the document is opened.
     private const string closingDocText = "Closing Documnet";               // Switches to this string while the document is closing.
+
+    
+    [Range(60f,120f)] [SerializeField] private float hintTimerLength = 60f; // Length of time before hint's are displayed.
+    private float hintTimer = 0f;                                           // Timer used to display hint's if player is taking too long
+
 
     void Awake()
     {
@@ -60,14 +68,27 @@ public class DocumentDisplayManager : MonoBehaviour
                 {
                     isMoving = false;
                     if (isShowing)
+                    {
+                        StartHintTimer();
                         SwitchOpenButtonText(closeDocText);
+                    }
                     else
                     {
+                        StopHintTimer();
                         solutionManager.showSolutionsButton.interactable = true;
                         SwitchOpenButtonText(openDocText);
                     }
                 }
             }
+        }
+
+        // Hint timer.
+        if (hintTimer != -1f)
+        {
+            if (hintTimer > 0)
+                hintTimer -= Time.fixedDeltaTime;
+            else
+                display.DisplayHints();
         }
     }
 
@@ -104,8 +125,21 @@ public class DocumentDisplayManager : MonoBehaviour
             showDocumentText.text = toShow;
     }
 
+    // Makes the display blank.
     public bool IsDisplayBlank()
     {
         return display.CurrentlyBlank();
+    }
+
+    // Sets the timer value to it's start value.
+    public void StartHintTimer()
+    {
+        hintTimer = hintTimerLength;
+    }
+
+    // Sets the timer value to -1.
+    public void StopHintTimer()
+    {
+        hintTimer = -1f;
     }
 }

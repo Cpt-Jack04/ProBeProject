@@ -4,7 +4,7 @@ public class DocumentSearchManager : MonoBehaviour
 {
     // Reference to the displaymanagers manager.
     DocumentDisplayManager documentManager;
-    SolutionDisplayManager searchManager;
+    SolutionDisplayManager solutionManager;
 
     // References to the result button scripts in the scene.
     [SerializeField] private ResultsManager result1;
@@ -14,14 +14,14 @@ public class DocumentSearchManager : MonoBehaviour
     void Awake()
     {
         documentManager = GetComponent<DocumentDisplayManager>();
-        searchManager = GetComponent<SolutionDisplayManager>();
+        solutionManager = GetComponent<SolutionDisplayManager>();
     }
 
     // Performs a search based in the document database based on the provided string.
     public void ConductSearch(string searchFor)
     {
         // Returns if search is blank.
-        if (searchFor == "" || documentManager.GetIsShowing() || searchManager.GetIsShowing())
+        if (searchFor == "" || documentManager.GetIsShowing() || solutionManager.GetIsShowing())
             return;
 
         // Calls the static search method...

@@ -14,6 +14,9 @@ public class Document : ScriptableObject
     [TextArea(15, 20)]
     public string content;          // The text within the document.
 
+    [TextArea(2, 4)]
+    public List<string> hints;      // Hints for this document.     // You will need to copy the hint from the document.
+
     [HideInInspector]
     public float searchScore;       // Comparision score EXCLUSIVELY used for searches.
 }

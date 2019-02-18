@@ -25,4 +25,7 @@ MonoBehaviour:
     off in.\n* No sign of foul play or tampering.\n* Fog machine is unplugged.\n*
     Smoke detectors were uncovered.\n* Covers for smoke detectors were in the room
     on the desk."
+  hints:
+  - '* No sign of foul play or tampering.'
+  - '* Covers for smoke detectors were in the room on the desk.'
   searchScore: 1.5099989

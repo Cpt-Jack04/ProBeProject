@@ -10,12 +10,15 @@ public class SolutionDisplayManager : MonoBehaviour
     private Vector3 hiddenPos;                                      // Vector3 reference for documents while off screen.
     [SerializeField] private Vector3 shownPos;                      // Vector3 reference for documents while on screen.
 
+
     private bool isShowing;                                         // Is true if the doc is to move on screen or while stationary on screen.
     private bool isMoving;                                          // Is true if the doc is moving on/off screen.
+
 
     [Range(1f, 20f)] [SerializeField] private float speed = 5f;     // Multiplier for the speed of the document moving on/off.
     private float startTime;                                        // Variable for the when the document starts moving. 
     private float journeyLength;                                    // Distance the document needs to travel.
+
 
     public Button showSolutionsButton;                              // Reference to the button the shows/hides the document.
     private TextMeshProUGUI showSolutionsText;                      // Reference to the TMPro component on the button above.
@@ -23,6 +26,7 @@ public class SolutionDisplayManager : MonoBehaviour
     private const string openingSolText = "Opening Solution";       // Switches to this string while the document is opening.
     private const string closeSolText = "Close Solution";           // Switches to this string once the document is opened.
     private const string closingSolText = "Closing Solution";       // Switches to this string while the document is closing.
+
 
     void Awake()
     {

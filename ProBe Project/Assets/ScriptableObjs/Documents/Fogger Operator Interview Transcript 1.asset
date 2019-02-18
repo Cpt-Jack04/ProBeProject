@@ -30,4 +30,8 @@ MonoBehaviour:
     put the cover on last time?\"\n\t\t\"Kevin, I think.\"\n\n\"And did Kevin put
     it on correctly?.\"\n\t\t\"I didn't watch him do it so I'm not sure.\"\n\n\"Alright,
     well those are all the questions I have. Thank you for your time.\""
+  hints:
+  - "\"Who put the cover on last time?\"\n\t\t\"Kevin, I think.\""
+  - "\"And did Kevin put it on correctly?.\"\n\t\t\"I didn't watch him do it so I'm
+    not sure.\""
   searchScore: 0.01

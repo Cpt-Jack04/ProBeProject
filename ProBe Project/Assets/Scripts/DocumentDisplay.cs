@@ -75,13 +75,21 @@ public class DocumentDisplay : MonoBehaviour
                 char[] replacementChar = new char[startHLChar.Length + hintToChar.Length + endHLChar.Length];
 
                 // Add the chars together.
-
-                //contentText.text.Replace()
-
-                for (int index = 0; index < contentToChar.Length; index++)
+                for (int index = 0; index < startHLChar.Length; index++)
                 {
-                    //if ()
+                    replacementChar[index] = startHLChar[index];
                 }
+                for (int index = 0; index < hintToChar.Length; index++)
+                {
+                    replacementChar[index + startHLChar.Length] = hintToChar[index];
+                }
+                for (int index = 0; index < endHLChar.Length; index++)
+                {
+                    replacementChar[index + startHLChar.Length + hintToChar.Length] = endHLChar[index];
+                }
+
+                // Replaces hint char with hint plus highlighting.
+                contentText.text = contentText.text.Replace(hint, replacementChar.ArrayToString());
             }
         }
     }

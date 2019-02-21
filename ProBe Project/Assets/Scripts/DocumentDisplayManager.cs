@@ -83,12 +83,18 @@ public class DocumentDisplayManager : MonoBehaviour
         }
 
         // Hint timer.
-        if (hintTimer != -1f)
+        if (hintTimer != -5f)
         {
             if (hintTimer > 0)
+            {
                 hintTimer -= Time.fixedDeltaTime;
+                Debug.Log(hintTimer);
+            }
             else
+            {
                 display.DisplayHints();
+                StopHintTimer();
+            }
         }
     }
 
@@ -140,6 +146,6 @@ public class DocumentDisplayManager : MonoBehaviour
     // Sets the timer value to -1.
     public void StopHintTimer()
     {
-        hintTimer = -1f;
+        hintTimer = -5f;
     }
 }

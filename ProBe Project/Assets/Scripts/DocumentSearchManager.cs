@@ -3,13 +3,13 @@
 public class DocumentSearchManager : MonoBehaviour
 {
     // Reference to the displaymanagers manager.
-    DocumentDisplayManager documentManager;
-    SolutionDisplayManager solutionManager;
+    DocumentDisplayManager documentManager = null;
+    SolutionDisplayManager solutionManager = null;
 
     // References to the result button scripts in the scene.
-    [SerializeField] private ResultsManager result1;
-    [SerializeField] private ResultsManager result2;
-    [SerializeField] private ResultsManager result3;
+    [SerializeField] private ResultsManager result1 = null;
+    [SerializeField] private ResultsManager result2 = null;
+    [SerializeField] private ResultsManager result3 = null;
 
     void Awake()
     {

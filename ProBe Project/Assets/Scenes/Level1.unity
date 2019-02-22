@@ -575,6 +575,7 @@ MonoBehaviour:
   speed: 10
   showDocumentButton: {fileID: 466044164}
   openDocText: Open Document
+  hintTimerLength: 60
 --- !u!114 &1266687280
 MonoBehaviour:
   m_ObjectHideFlags: 0

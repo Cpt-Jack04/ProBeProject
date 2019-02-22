@@ -4,11 +4,11 @@ using TMPro;
 
 public class SolutionDisplayManager : MonoBehaviour
 {
-    [SerializeField] private GameObject solutions;                  // Reference to the page to be moved.
-    [SerializeField] private DocumentDisplayManager documentManager;// Reference to the document manager.
-    private SolutionDisplay display;                                // Reference to the display component on the document.
-    private Vector3 hiddenPos;                                      // Vector3 reference for documents while off screen.
-    [SerializeField] private Vector3 shownPos;                      // Vector3 reference for documents while on screen.
+    [SerializeField] private GameObject solutions = null;                   // Reference to the page to be moved.
+    [SerializeField] private DocumentDisplayManager documentManager = null; // Reference to the document manager.
+    private SolutionDisplay display = null;                                 // Reference to the display component on the document.
+    private Vector3 hiddenPos = Vector3.zero;                               // Vector3 reference for documents while off screen.
+    [SerializeField] private Vector3 shownPos = Vector3.zero;               // Vector3 reference for documents while on screen.
 
 
     private bool isShowing;                                         // Is true if the doc is to move on screen or while stationary on screen.

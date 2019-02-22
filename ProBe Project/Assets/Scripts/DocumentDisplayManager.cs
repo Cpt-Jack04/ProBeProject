@@ -4,12 +4,12 @@ using TMPro;
 
 public class DocumentDisplayManager : MonoBehaviour
 {
-    [SerializeField] private Document[] documents;                          // Reference to all of the documents in the scene.
-    [SerializeField] private GameObject document;                           // Reference to the document to be moved.
-    [SerializeField] private SolutionDisplayManager solutionManager;        // Reference to the solution manager.
-    private DocumentDisplay display;                                        // Reference to the display component on the document.
-    private Vector3 hiddenPos;                                              // Vector3 reference for documents while off screen.
-    [SerializeField] private Vector3 shownPos;                              // Vector3 reference for documents while on screen.
+    [SerializeField] private Document[] documents = null;                   // Reference to all of the documents in the scene.
+    [SerializeField] private GameObject document = null;                    // Reference to the document to be moved.
+    [SerializeField] private SolutionDisplayManager solutionManager = null; // Reference to the solution manager.
+    private DocumentDisplay display = null;                                 // Reference to the display component on the document.
+    private Vector3 hiddenPos = Vector3.zero;                               // Vector3 reference for documents while off screen.
+    [SerializeField] private Vector3 shownPos = Vector3.zero;               // Vector3 reference for documents while on screen.
 
 
     private bool isShowing;                                                 // Is true if the doc is to move on screen or while stationary on screen.
@@ -75,6 +75,7 @@ public class DocumentDisplayManager : MonoBehaviour
                     else
                     {
                         StopHintTimer();
+                        display.HideHints();
                         solutionManager.showSolutionsButton.interactable = true;
                         SwitchOpenButtonText(openDocText);
                     }
@@ -86,10 +87,7 @@ public class DocumentDisplayManager : MonoBehaviour
         if (hintTimer != -5f)
         {
             if (hintTimer > 0)
-            {
                 hintTimer -= Time.fixedDeltaTime;
-                Debug.Log(hintTimer);
-            }
             else
             {
                 display.DisplayHints();

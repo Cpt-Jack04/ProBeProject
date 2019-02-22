@@ -5,15 +5,15 @@ using TMPro;
 public class ResultsManager : MonoBehaviour
 {
     // Reference to the document display.
-    [SerializeField] private DocumentDisplay display;
+    [SerializeField] private DocumentDisplay display = null;
 
     // Reference to the results of the previous search.
-    public Document result;
+    public Document result = null;
 
     // The the button as well as textmeshpro component from the child of the button.
-    private Button button;
-    private TextMeshProUGUI resultText;
-    [SerializeField] private TextMeshProUGUI description;
+    private Button button = null;
+    private TextMeshProUGUI resultText = null;
+    [SerializeField] private TextMeshProUGUI description = null;
     private const string noResult = "";
 
     void Start()

@@ -6,6 +6,7 @@ public class SolutionDisplayManager : MonoBehaviour
 {
     [SerializeField] private GameObject solutions = null;                   // Reference to the page to be moved.
     [SerializeField] private DocumentDisplayManager documentManager = null; // Reference to the document manager.
+    [SerializeField] private NoticeDisplayManager noticeManager = null;     // Reference to the notice manager.
     private SolutionDisplay display = null;                                 // Reference to the display component on the document.
     private Vector3 hiddenPos = Vector3.zero;                               // Vector3 reference for documents while off screen.
     [SerializeField] private Vector3 shownPos = Vector3.zero;               // Vector3 reference for documents while on screen.
@@ -66,6 +67,7 @@ public class SolutionDisplayManager : MonoBehaviour
                     {
                         if (!documentManager.IsDisplayBlank())
                             documentManager.showDocumentButton.interactable = true;
+                        noticeManager.showNoticeButton.interactable = true;
                         SwitchOpenButtonText(openSolText);
                     }
                 }
@@ -82,7 +84,7 @@ public class SolutionDisplayManager : MonoBehaviour
     // Sets varibeles to allow movement.
     public void StartMovingDoc()
     {
-        if (!isMoving && !documentManager.GetIsShowing())
+        if (!isMoving && !documentManager.GetIsShowing() && !noticeManager.GetIsShowing())
         {
             isShowing = !isShowing;
             startTime = Time.time;
@@ -90,6 +92,7 @@ public class SolutionDisplayManager : MonoBehaviour
             if (isShowing)
             {
                 documentManager.showDocumentButton.interactable = false;
+                noticeManager.showNoticeButton.interactable = false;
                 SwitchOpenButtonText(openingSolText);
             }
             else

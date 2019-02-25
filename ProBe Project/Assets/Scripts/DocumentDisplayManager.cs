@@ -7,6 +7,7 @@ public class DocumentDisplayManager : MonoBehaviour
     [SerializeField] private Document[] documents = null;                   // Reference to all of the documents in the scene.
     [SerializeField] private GameObject document = null;                    // Reference to the document to be moved.
     [SerializeField] private SolutionDisplayManager solutionManager = null; // Reference to the solution manager.
+    [SerializeField] private NoticeDisplayManager noticeManager = null;     // Reference to the notice manager.
     private DocumentDisplay display = null;                                 // Reference to the display component on the document.
     private Vector3 hiddenPos = Vector3.zero;                               // Vector3 reference for documents while off screen.
     [SerializeField] private Vector3 shownPos = Vector3.zero;               // Vector3 reference for documents while on screen.
@@ -77,6 +78,7 @@ public class DocumentDisplayManager : MonoBehaviour
                         StopHintTimer();
                         display.HideHints();
                         solutionManager.showSolutionsButton.interactable = true;
+                        noticeManager.showNoticeButton.interactable = true;
                         SwitchOpenButtonText(openDocText);
                     }
                 }
@@ -105,7 +107,7 @@ public class DocumentDisplayManager : MonoBehaviour
     // Sets varibeles to allow movement.
     public void StartMovingDoc()
     {
-        if (!isMoving && !display.CurrentlyBlank() && !solutionManager.GetIsShowing())
+        if (!isMoving && !display.CurrentlyBlank() && !solutionManager.GetIsShowing() && !noticeManager.GetIsShowing())
         {
             isShowing = !isShowing;
             startTime = Time.time;
@@ -113,6 +115,7 @@ public class DocumentDisplayManager : MonoBehaviour
             if (isShowing)
             {
                 solutionManager.showSolutionsButton.interactable = false;
+                noticeManager.showNoticeButton.interactable = false;
                 SwitchOpenButtonText(openingDocText);
             }
             else

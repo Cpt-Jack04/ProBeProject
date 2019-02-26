@@ -40,8 +40,8 @@ public static class DocumentDatabase
                 string[] docStrings = doc.content.Split(spliters);
                 foreach (string docWord in docStrings)
                 {
-                    if (word.Equals(docWord))
-                        currentScore += 0.1f;
+                    if (word.ToLower().Equals(docWord.ToLower()))
+                        currentScore += 0.5f;
                 }
             }
             doc.searchScore = currentScore;

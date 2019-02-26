@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4525eff632f444fbe4efa917b96a9c, type: 3}
+  m_Name: Fogger Operator Assessment Report
+  m_EditorClassIdentifier: 
+  docTags:
+  - Fogger
+  - Assessment
+  - Report
+  name: FoggerOperatorAssessmentReport.pdf
+  destription: The report of the fogger operatior assessment after training.
+  content: 'THE FILE BEGINS
+
+
+    10/01/2018
+
+    Fogger Operator Assessment Report:
+
+    Question 1:  Don - Correct --- Kevin Correct
+
+    Question 2:  Don - Correct --- Kevin Correct
+
+    Question 3:  Don - Correct --- Kevin Correct
+
+    Question 4:  Don - Incorrect --- Kevin Correct
+
+    Question 5:  Don - Incorrect --- Kevin - Incorrect
+
+    Question 6:  Don - Correct --- Kevin Correct
+
+    Question 7:  Don - Correct --- Kevin Correct
+
+    Question 8:  Don - Correct --- Kevin Correct
+
+    Question 9:  Don - Correct --- Kevin Correct
+
+    Question 10:  Don - Correct --- Kevin Correct
+
+
+    Result:   Don - Passed --- Kevin - Passed'
+  hints:
+  - 'Result:   Don - Passed --- Kevin - Passed'
+  searchScore: 0

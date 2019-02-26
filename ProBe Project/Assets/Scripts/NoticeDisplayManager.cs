@@ -38,10 +38,21 @@ public class NoticeDisplayManager : MonoBehaviour
         hiddenPos = notice.transform.position;
         journeyLength = Vector3.Distance(hiddenPos, shownPos);
 
-        isShowing = false;
         isMoving = false;
 
         showNoticeText = showNoticeButton.GetComponentInChildren<TextMeshProUGUI>();
+    }
+
+    void Start()
+    {
+        isShowing = true;
+
+        documentManager.showDocumentButton.interactable = false;
+        solutionManager.showSolutionsButton.interactable = false;
+        searchButtons.SetActive(false);
+        SwitchOpenButtonText(closeNoticeText);
+
+        notice.transform.position = shownPos;
     }
 
     void Update()

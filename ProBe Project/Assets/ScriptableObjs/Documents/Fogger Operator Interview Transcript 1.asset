@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   docTags:
   - Fogger
+  - Operator
   - Interview
   - Transcript
   - Don
@@ -34,4 +35,4 @@ MonoBehaviour:
   - "\"Who put the cover on last time?\"\n\t\t\"Kevin, I think.\""
   - "\"And did Kevin put it on correctly?.\"\n\t\t\"I didn't watch him do it so I'm
     not sure.\""
-  searchScore: 0.01
+  searchScore: 0

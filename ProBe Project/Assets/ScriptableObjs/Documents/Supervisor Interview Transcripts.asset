@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4525eff632f444fbe4efa917b96a9c, type: 3}
+  m_Name: Supervisor Interview Transcripts
+  m_EditorClassIdentifier: 
+  docTags:
+  - Supervisor
+  - Interview
+  - Transcript
+  name: SupervisorInterviewTranscripts.pdf
+  destription: The trascript of the interview with the fogger supervisor after the
+    incident.
+  content: "THE FILE BEGINS:\n10/16/2018\n\n\"Please state your name for the record.\"\n\t\t\"Paul
+    Waters.\"\n\"Did Kevin and Don both pass the training assessment?\"\n\t\t\"Yes.\"\n\"Do
+    Kevin Don have specific tasks that each of them assigned to do?\"\n\t\t\"I don't
+    believe so, no.\"\n\"Is there any reason for this?\"\n\t\t\"I just assumed they
+    didn't need it.\"\n\"Alright, well those are all the questions I have. Thank you
+    for your time.\""
+  hints:
+  - "\"Do Kevin Don have specific tasks that each of them assigned to do?\"\n\t\t\"I
+    don't believe so, no.\"\n\"Is there any reason for this?\"\n\t\t\"I just assumed
+    they didn't need it.\""
+  searchScore: 0

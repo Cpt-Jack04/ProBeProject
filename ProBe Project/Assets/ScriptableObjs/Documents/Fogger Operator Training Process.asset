@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c4525eff632f444fbe4efa917b96a9c, type: 3}
+  m_Name: Fogger Operator Training Process
+  m_EditorClassIdentifier: 
+  docTags:
+  - Fogger
+  - Training
+  name: "FoggerOperatorTrainingProcess.pdf\t"
+  destription: The process of fogging a room used during training.
+  content: 'THE FILE BEGINS
+
+
+    Fogger Training Sheet:
+
+    Step 1: Gather materials from the supply closet and go to the room in need of
+    fogging.
+
+    Step 2: Cover vents, smoke alarms, and other necessary surfaces with appropriate
+    covers.
+
+    Step 3: Fill fogger machine with fluid, and then plug in the machine.
+
+    Step 4: Turn on machine and wait for the fogger machine to complete a cycle.
+
+    Step 5: Unplug fogger machine and uncover surfaces.
+
+    Step 6: Pull all materials back in the supply closet.'
+  hints:
+  - 'Step 2: Cover vents, smoke alarms, and other necessary surfaces with appropriate
+    covers.'
+  searchScore: 0

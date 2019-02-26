@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   docTags:
   - Fogger
+  - Operator
   - Interview
   - Transcript
   - Kevin
@@ -36,4 +37,4 @@ MonoBehaviour:
   - "\"So, if neither of you put on the cover, who did?\"\n\t\t\"I have no clue.\""
   - "\"Did you and Don pass your assessment?\"\n\t\t\"I did and as far as I know,
     Don did too.\""
-  searchScore: 0.02
+  searchScore: 0

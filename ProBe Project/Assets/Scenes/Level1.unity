@@ -538,6 +538,7 @@ GameObject:
   - component: {fileID: 1266687280}
   - component: {fileID: 1266687282}
   - component: {fileID: 1266687278}
+  - component: {fileID: 1266687283}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameController
@@ -574,8 +575,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   documents:
   - {fileID: 11400000, guid: 1e5cdb8d39e3d61409fb3b58f32fa62f, type: 2}
+  - {fileID: 11400000, guid: 2956c812822c2414ea226926c2e1fedc, type: 2}
   - {fileID: 11400000, guid: 5722cedc46926ca4dbf250ac86bc1e3e, type: 2}
   - {fileID: 11400000, guid: 883299e0b4dc0e849b8c4fc54bc17d8f, type: 2}
+  - {fileID: 11400000, guid: 060fec900166fd946b80fe36f93bfdff, type: 2}
+  - {fileID: 11400000, guid: 29cfa6c64efc52c48b5ddd2f803fbbee, type: 2}
   document: {fileID: 120298004}
   solutionManager: {fileID: 1266687280}
   noticeManager: {fileID: 1266687282}
@@ -652,6 +656,19 @@ MonoBehaviour:
   speed: 10
   showNoticeButton: {fileID: 739721662282776970}
   openNoticeText: Open Notice
+--- !u!114 &1266687283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266687277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edcd658a7d11594898103a8ae507239, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quitTimer: 5
 --- !u!114 &1564166066 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 739721661665609275, guid: 03f1043963fda8e4496c30669d18ea1d,

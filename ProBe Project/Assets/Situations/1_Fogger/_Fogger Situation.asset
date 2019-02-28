@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15212d6688442e74790c481eb3a8e97c, type: 3}
+  m_Name: _Fogger Situation
+  m_EditorClassIdentifier: 
+  documents:
+  - {fileID: 11400000, guid: 1e5cdb8d39e3d61409fb3b58f32fa62f, type: 2}
+  - {fileID: 11400000, guid: 2956c812822c2414ea226926c2e1fedc, type: 2}
+  - {fileID: 11400000, guid: 5722cedc46926ca4dbf250ac86bc1e3e, type: 2}
+  - {fileID: 11400000, guid: 883299e0b4dc0e849b8c4fc54bc17d8f, type: 2}
+  - {fileID: 11400000, guid: 060fec900166fd946b80fe36f93bfdff, type: 2}
+  - {fileID: 11400000, guid: 29cfa6c64efc52c48b5ddd2f803fbbee, type: 2}
+  correctSolution: 1
+  dataDescription: Both fogger misunderstood how to apply the smoke alarm cover.
+  toolsandresourcesDescription: Each fogger operator assumed the other one applied
+    the alarm covers.
+  incentivesDescription: Neither fogger operator felt like they paid enough for their
+    work.
+  knowledgeandskillsDescription: The two fogger operators did not know how to apply
+    the smoke alarm colvers.
+  capacityDescription: Both fogger operators were too small to apply the smoke alarm
+    covers.
+  motivationDescription: Both foggers felt like the fogger process is not important.

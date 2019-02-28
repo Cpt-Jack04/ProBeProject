@@ -4,7 +4,7 @@ using TMPro;
 
 public class DocumentDisplayManager : MonoBehaviour
 {
-    [SerializeField] private Document[] documents = null;                   // Reference to all of the documents in the scene.
+    [SerializeField] private Situation situation = null;                    // Reference to the situation of this scene.
     [SerializeField] private GameObject document = null;                    // Reference to the document to be moved.
     [SerializeField] private SolutionDisplayManager solutionManager = null; // Reference to the solution manager.
     [SerializeField] private NoticeDisplayManager noticeManager = null;     // Reference to the notice manager.
@@ -37,7 +37,7 @@ public class DocumentDisplayManager : MonoBehaviour
     void Awake()
     {
         // Sets the static list of documents for the database to the list of documents for this scene.
-        DocumentDatabase.AddDocumentsAtStart(documents);
+        DocumentDatabase.AddDocumentsAtStart(situation.documents);
 
         display = document.GetComponent<DocumentDisplay>();
         

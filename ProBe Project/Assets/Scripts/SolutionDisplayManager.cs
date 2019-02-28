@@ -4,6 +4,7 @@ using TMPro;
 
 public class SolutionDisplayManager : MonoBehaviour
 {
+    [SerializeField] private Situation situation = null;                    // Reference to the situation of this scene.
     [SerializeField] private GameObject solutions = null;                   // Reference to the page to be moved.
     [SerializeField] private DocumentDisplayManager documentManager = null; // Reference to the document manager.
     [SerializeField] private NoticeDisplayManager noticeManager = null;     // Reference to the notice manager.
@@ -31,7 +32,6 @@ public class SolutionDisplayManager : MonoBehaviour
 
     void Awake()
     {
-        // Sets the static list of documents for the database to the list of documents for this scene.
         display = solutions.GetComponent<SolutionDisplay>();
 
         hiddenPos = solutions.transform.position;
@@ -75,13 +75,18 @@ public class SolutionDisplayManager : MonoBehaviour
         }
     }
 
-    // Returns true if the document is showing.
+    /// <summary>
+    /// Returns true if the document is showing.
+    /// </summary>
+    /// <returns>Returns true if the document is the document is or is moving out on screen.</returns>
     public bool GetIsShowing()
     {
         return isShowing;
     }
 
-    // Sets varibeles to allow movement.
+    /// <summary>
+    /// Sets varibeles to allow movement.
+    /// </summary>
     public void StartMovingDoc()
     {
         if (!isMoving && !documentManager.GetIsShowing() && !noticeManager.GetIsShowing())
@@ -102,10 +107,23 @@ public class SolutionDisplayManager : MonoBehaviour
         }
     }
 
-    // Switches the OpenButtonText to a given string.
+    /// <summary>
+    /// Switches the OpenButtonText to a given string.
+    /// </summary>
+    /// <param name="toShow">The string that will replace the button text</param>
     public void SwitchOpenButtonText(string toShow)
     {
         if (showSolutionsText.text != toShow)
             showSolutionsText.text = toShow;
+    }
+
+    /// <summary>
+    /// Checks to see if the player's guess is for a solution is correct.
+    /// </summary>
+    /// <param name="guess">The solution the player tapped on.</param>
+    /// <returns>Returns true if the guess the player made is the correct solution.</returns>
+    public bool CheckGuess(Situation.SolutionType guess)
+    {
+        return guess == situation.correctSolution;
     }
 }

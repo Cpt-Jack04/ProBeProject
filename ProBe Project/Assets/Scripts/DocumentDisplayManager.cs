@@ -98,13 +98,18 @@ public class DocumentDisplayManager : MonoBehaviour
         }
     }
 
-    // Returns true if the document is showing.
+    /// <summary>
+    /// Gets the IsShowing variable relating to the document page.
+    /// </summary>
+    /// <returns>Returns true if the document page is out or is moving out on screen.</returns>
     public bool GetIsShowing()
     {
         return isShowing;
     }
 
-    // Sets varibeles to allow movement.
+    /// <summary>
+    /// Sets varibeles to allow movement.
+    /// </summary>
     public void StartMovingDoc()
     {
         if (!isMoving && !display.CurrentlyBlank() && !solutionManager.GetIsShowing() && !noticeManager.GetIsShowing())
@@ -125,26 +130,36 @@ public class DocumentDisplayManager : MonoBehaviour
         }
     }
 
-    // Switches the OpenButtonText to a given string.
+    /// <summary>
+    /// Switches the OpenButtonText to a given string.
+    /// </summary>
+    /// <param name="toShow">The string that will replace the button text</param>
     public void SwitchOpenButtonText(string toShow)
     {
         if (showDocumentText.text != toShow)
             showDocumentText.text = toShow;
     }
 
-    // Makes the display blank.
+    /// <summary>
+    /// Checks to see if there's any information on the document at the moment.
+    /// </summary>
+    /// <returns>Returns true if there is no information being displayed.</returns>
     public bool IsDisplayBlank()
     {
         return display.CurrentlyBlank();
     }
 
-    // Sets the timer value to it's start value.
+    /// <summary>
+    /// Starts the timer related to displaying the hints on a document.
+    /// </summary>
     public void StartHintTimer()
     {
         hintTimer = hintTimerLength;
     }
 
-    // Sets the timer value to -1.
+    /// <summary>
+    /// Stops the timer related to displaying the hints on a document.
+    /// </summary>
     public void StopHintTimer()
     {
         hintTimer = -5f;

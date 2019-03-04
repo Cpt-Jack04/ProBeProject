@@ -247,21 +247,81 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 923035753004196397, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+    - target: {fileID: 1492846373714893617, guid: 5d011ff40816f0c48b0ed816ab0c939d,
         type: 3}
       propertyPath: m_havePropertiesChanged
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 923035753004196397, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+    - target: {fileID: 1492846373714893617, guid: 5d011ff40816f0c48b0ed816ab0c939d,
         type: 3}
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8741290371356534273, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+    - target: {fileID: 6755767248263987079, guid: 5d011ff40816f0c48b0ed816ab0c939d,
         type: 3}
-      propertyPath: solutionManager
-      value: 
-      objectReference: {fileID: 1266687280}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6755767248263987079, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062401724985862625, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9062401724985862625, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305979925727526585, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6305979925727526585, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012282891373450594, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012282891373450594, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276871509249123610, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7276871509249123610, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844620180371533831, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_inputSource
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844620180371533831, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7844620180371533831, guid: 5d011ff40816f0c48b0ed816ab0c939d,
+        type: 3}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d011ff40816f0c48b0ed816ab0c939d, type: 3}
 --- !u!1 &149565336 stripped
@@ -561,9 +621,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   situation: {fileID: 11400000, guid: 155bc1d27b3814d4ca83e714819bc8e3, type: 2}
   solutions: {fileID: 149565336}
+  searchButtons: {fileID: 1231004890}
   documentManager: {fileID: 1266687279}
   noticeManager: {fileID: 1266687282}
-  shownPos: {x: 4.8, y: 0, z: 0}
+  shownPos: {x: 0, y: 1, z: 0}
   speed: 10
   showSolutionsButton: {fileID: 1190644107}
   openSolText: Open Solutions
@@ -654,7 +715,7 @@ GameObject:
   - component: {fileID: 1798324175}
   - component: {fileID: 1798324174}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: How To Play Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -716,7 +777,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -750,6 +811,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Computer
+      objectReference: {fileID: 0}
+    - target: {fileID: 739721661340500237, guid: 03f1043963fda8e4496c30669d18ea1d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 466044164, guid: 03f1043963fda8e4496c30669d18ea1d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

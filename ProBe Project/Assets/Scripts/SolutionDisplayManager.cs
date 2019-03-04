@@ -6,6 +6,7 @@ public class SolutionDisplayManager : MonoBehaviour
 {
     [SerializeField] private Situation situation = null;                    // Reference to the situation of this scene.
     [SerializeField] private GameObject solutions = null;                   // Reference to the page to be moved.
+    [SerializeField] private GameObject searchButtons = null;               // Reference to the search buttons in the scene.
     [SerializeField] private DocumentDisplayManager documentManager = null; // Reference to the document manager.
     [SerializeField] private NoticeDisplayManager noticeManager = null;     // Reference to the notice manager.
     private SolutionDisplay display = null;                                 // Reference to the display component on the document.
@@ -68,7 +69,9 @@ public class SolutionDisplayManager : MonoBehaviour
                         if (!documentManager.IsDisplayBlank())
                             documentManager.showDocumentButton.interactable = true;
                         noticeManager.showNoticeButton.interactable = true;
+                        searchButtons.SetActive(true);
                         SwitchOpenButtonText(openSolText);
+                        display.SetResponseText();
                     }
                 }
             }
@@ -76,9 +79,9 @@ public class SolutionDisplayManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Returns true if the document is showing.
+    /// Gets the IsShowing variable relating to the solutions page.
     /// </summary>
-    /// <returns>Returns true if the document is the document is or is moving out on screen.</returns>
+    /// <returns>Returns true if the solutions page is out or is moving out on screen.</returns>
     public bool GetIsShowing()
     {
         return isShowing;
@@ -98,6 +101,7 @@ public class SolutionDisplayManager : MonoBehaviour
             {
                 documentManager.showDocumentButton.interactable = false;
                 noticeManager.showNoticeButton.interactable = false;
+                searchButtons.SetActive(false);
                 SwitchOpenButtonText(openingSolText);
             }
             else
@@ -118,11 +122,37 @@ public class SolutionDisplayManager : MonoBehaviour
     }
 
     /// <summary>
+    /// Accessor for the descriptions of the differnt kinds solutions.
+    /// </summary>
+    /// <param name="solution">The type of solution provided.</param>
+    /// <returns>Returns the description related to given solution.</returns>
+    public string GetSolutionDescription(Situation.SolutionType solution)
+    {
+        switch (solution)
+        {
+            case Situation.SolutionType.Data:
+                return situation.dataDescription;
+            case Situation.SolutionType.ToolsAndResources:
+                return situation.toolsandresourcesDescription;
+            case Situation.SolutionType.Incentives:
+                return situation.incentivesDescription;
+            case Situation.SolutionType.KnowledgeAndSkills:
+                return situation.knowledgeandskillsDescription;
+            case Situation.SolutionType.Capacity:
+                return situation.capacityDescription;
+            case Situation.SolutionType.Motivation:
+                return situation.motivationDescription;
+            default:
+                return "Invalid Situation.SolutionType given.";
+        }
+    }
+
+    /// <summary>
     /// Checks to see if the player's guess is for a solution is correct.
     /// </summary>
     /// <param name="guess">The solution the player tapped on.</param>
     /// <returns>Returns true if the guess the player made is the correct solution.</returns>
-    public bool CheckGuess(Situation.SolutionType guess)
+    public bool CheckSolution(Situation.SolutionType guess)
     {
         return guess == situation.correctSolution;
     }

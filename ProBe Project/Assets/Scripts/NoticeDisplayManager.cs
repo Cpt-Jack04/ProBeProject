@@ -5,7 +5,7 @@ using TMPro;
 public class NoticeDisplayManager : MonoBehaviour
 {
     [SerializeField] private GameObject notice = null;                      // Reference to the page to be moved.
-    [SerializeField] private GameObject searchButtons = null;               // Reference to the notice manager.
+    [SerializeField] private GameObject searchButtons = null;               // Reference to the search buttons in the scene.
     [SerializeField] private DocumentDisplayManager documentManager = null; // Reference to the document manager.
     [SerializeField] private SolutionDisplayManager solutionManager = null; // Reference to the solution manager.
     [TextArea(15, 20)]
@@ -90,13 +90,18 @@ public class NoticeDisplayManager : MonoBehaviour
         }
     }
 
-    // Returns true if the document is showing.
+    /// <summary>
+    /// Gets the IsShowing variable relating to the solutions page.
+    /// </summary>
+    /// <returns>Returns true if the solutions page is out or is moving out on screen.</returns>
     public bool GetIsShowing()
     {
         return isShowing;
     }
 
-    // Sets varibeles to allow movement.
+    /// <summary>
+    /// Sets varibeles to allow movement.
+    /// </summary>
     public void StartMovingNotice()
     {
         if (!isMoving && !documentManager.GetIsShowing() && !solutionManager.GetIsShowing())
@@ -118,7 +123,10 @@ public class NoticeDisplayManager : MonoBehaviour
         }
     }
 
-    // Switches the OpenButtonText to a given string.
+    /// <summary>
+    /// Switches the OpenButtonText to a given string.
+    /// </summary>
+    /// <param name="toShow">The string that will replace the button text</param>
     public void SwitchOpenButtonText(string toShow)
     {
         if (showNoticeText.text != toShow)

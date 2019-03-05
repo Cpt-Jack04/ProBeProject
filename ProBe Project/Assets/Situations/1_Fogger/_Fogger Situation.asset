@@ -21,12 +21,24 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29cfa6c64efc52c48b5ddd2f803fbbee, type: 2}
   correctSolution: 1
   dataDescription: Both fogger misunderstood how to apply the smoke alarm cover.
+  dataResponse: This is incorrect, the fogger where able to describe the process in
+    the Fogger Interview Transcripts.
   toolsandresourcesDescription: Each fogger operator assumed the other one applied
     the alarm covers.
+  toolsandresourcesResponse: You're correct! Neither of the fogger operators knew
+    whose responsiblity it was to put the smoke detector covers on.
   incentivesDescription: Neither fogger operator felt like they paid enough for their
     work.
+  incentivesResponse: This is incorrect, an insentive was never referenced as an issue
+    of the fogger operators.
   knowledgeandskillsDescription: The two fogger operators did not know how to apply
     the smoke alarm colvers.
+  knowledgeandskillsResponse: This is incorrect, both fogger operators passed thier
+    assessments.
   capacityDescription: Both fogger operators were too small to apply the smoke alarm
     covers.
+  capacityResponse: This is incorrect, the height of the operators was never referenced
+    as an issue.
   motivationDescription: Both foggers felt like the fogger process is not important.
+  motivationResponse: This is incorrect, the importance of the process was never was
+    never referenced as issue for the operators.

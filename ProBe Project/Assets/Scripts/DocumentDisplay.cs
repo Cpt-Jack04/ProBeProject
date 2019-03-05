@@ -40,6 +40,8 @@ public class DocumentDisplay : MonoBehaviour
             textBeforeHighlight = newDoc.content;
 
             hints = newDoc.hints;
+            if (FindObjectOfType<TutorialManager>().TutorialIndex == 2)
+                FindObjectOfType<TutorialManager>().NextTutorialObject();
         }
     }
 

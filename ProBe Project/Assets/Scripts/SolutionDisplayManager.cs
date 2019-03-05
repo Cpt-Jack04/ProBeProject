@@ -124,7 +124,7 @@ public class SolutionDisplayManager : MonoBehaviour
     /// <summary>
     /// Accessor for the descriptions of the differnt kinds solutions.
     /// </summary>
-    /// <param name="solution">The type of solution provided.</param>
+    /// <param name="solution">The type of solution chosen.</param>
     /// <returns>Returns the description related to given solution.</returns>
     public string GetSolutionDescription(Situation.SolutionType solution)
     {
@@ -142,6 +142,32 @@ public class SolutionDisplayManager : MonoBehaviour
                 return situation.capacityDescription;
             case Situation.SolutionType.Motivation:
                 return situation.motivationDescription;
+            default:
+                return "Invalid Situation.SolutionType given.";
+        }
+    }
+
+    /// <summary>
+    /// Accessor for the responses of the different kinds of solutions.
+    /// </summary>
+    /// <param name="solution">The type of solution chosen.</param>
+    /// <returns>Returns the response related to given solution.</returns>
+    public string GetSolutionResponse(Situation.SolutionType solution)
+    {
+        switch (solution)
+        {
+            case Situation.SolutionType.Data:
+                return situation.dataResponse;
+            case Situation.SolutionType.ToolsAndResources:
+                return situation.toolsandresourcesResponse;
+            case Situation.SolutionType.Incentives:
+                return situation.incentivesResponse;
+            case Situation.SolutionType.KnowledgeAndSkills:
+                return situation.knowledgeandskillsResponse;
+            case Situation.SolutionType.Capacity:
+                return situation.capacityResponse;
+            case Situation.SolutionType.Motivation:
+                return situation.motivationResponse;
             default:
                 return "Invalid Situation.SolutionType given.";
         }

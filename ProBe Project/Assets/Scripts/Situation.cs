@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "New Situation", menuName = "Situation")]
 public class Situation : ScriptableObject
@@ -34,10 +33,22 @@ public class Situation : ScriptableObject
     public string dataDescription;
 
     /// <summary>
+    /// A reasoning of why the Data is the correct/incorrect answer.
+    /// </summary>
+    [TextArea(2, 2)]
+    public string dataResponse;
+
+    /// <summary>
     /// A description to for the ToolsAndResources solution.
     /// </summary>
     [TextArea(2, 2)]
     public string toolsandresourcesDescription;
+
+    /// <summary>
+    /// A reasoning of why the Tools and Resources is the correct/incorrect answer.
+    /// </summary>
+    [TextArea(2, 2)]
+    public string toolsandresourcesResponse;
 
     /// <summary>
     /// A description to for the Incentives solution.
@@ -46,10 +57,22 @@ public class Situation : ScriptableObject
     public string incentivesDescription;
 
     /// <summary>
-    /// A description to for the KnowledgeAndSkills solution.
+    /// A reasoning of why the Incentives is the correct/incorrect answer.
+    /// </summary>
+    [TextArea(2, 2)]
+    public string incentivesResponse;
+
+    /// <summary>
+    /// A description to for the Knowledge and Skills solution.
     /// </summary>
     [TextArea(2, 2)]
     public string knowledgeandskillsDescription;
+
+    /// <summary>
+    /// A reasoning of why the Knowledge and Skills is the correct/incorrect answer.
+    /// </summary>
+    [TextArea(2, 2)]
+    public string knowledgeandskillsResponse;
 
     /// <summary>
     /// A description to for the Capacity solution.
@@ -58,8 +81,20 @@ public class Situation : ScriptableObject
     public string capacityDescription;
 
     /// <summary>
+    /// A reasoning of why the Capacity is the correct/incorrect answer.
+    /// </summary>
+    [TextArea(2, 2)]
+    public string capacityResponse;
+
+    /// <summary>
     /// A description to for the Motivation solution.
     /// </summary>
     [TextArea(2, 2)]
     public string motivationDescription;
+
+    /// <summary>
+    /// A reasoning of why the Motivation is the correct/incorrect answer.
+    /// </summary>
+    [TextArea(2, 2)]
+    public string motivationResponse;
 }

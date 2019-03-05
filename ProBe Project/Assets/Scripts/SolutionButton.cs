@@ -30,5 +30,6 @@ public class SolutionButton : MonoBehaviour
         {
             Debug.Log("Isn't correct.");
         }
+        FindObjectOfType<SolutionDisplay>().SetResponseText(solutionManager.GetSolutionResponse(solution));
     }
 }

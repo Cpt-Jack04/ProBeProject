@@ -31,6 +31,8 @@ public class DocumentSearchManager : MonoBehaviour
         result1.ChangeResult(PullFirst());
         result2.ChangeResult(PullSecond());
         result3.ChangeResult(PullThird());
+        if (FindObjectOfType<TutorialManager>().TutorialIndex == 1)
+            FindObjectOfType<TutorialManager>().NextTutorialObject();
     }
 
     // Pulls the first result of the search.

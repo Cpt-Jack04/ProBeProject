@@ -60,6 +60,8 @@ public class NoticeDisplayManager : MonoBehaviour
         // Controls the document while moving.
         if (isMoving)
         {
+            if (FindObjectOfType<TutorialManager>().TutorialIndex == 0)
+                FindObjectOfType<TutorialManager>().NextTutorialObject();
             float distCovered = (Time.time - startTime) * speed;
             float fracJourney = distCovered / journeyLength;
 
